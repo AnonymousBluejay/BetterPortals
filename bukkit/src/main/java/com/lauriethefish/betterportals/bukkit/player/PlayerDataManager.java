@@ -111,10 +111,10 @@ public class PlayerDataManager implements IPlayerDataManager, Listener   {
         IPlayerData playerData = playerDataFactory.create(event.getPlayer());
         players.put(event.getPlayer(), playerData);
 
-        TeleportRequest teleportOnJoin = pendingTeleportOnJoin.remove(playerId);
+        /*TeleportRequest teleportOnJoin = pendingTeleportOnJoin.remove(playerId);
         if(teleportOnJoin != null) {
             processTeleportOnJoin(event.getPlayer(), teleportOnJoin);
-        }
+        }*/
 
         ISelectionManager selectionManager = loggedOutPlayerSelections.get(playerId);
         if(selectionManager != null) {
